@@ -38,10 +38,10 @@ angular.module('RouteControllers', [])
                 });
             }
         }
-    });
+    })
     .controller('HomeController', function($scope) {
         $scope.title = "Welcome To Angular Todo KK";
-    });
+    })
     .controller('RegisterController', function($scope, UserAPIService,store) {
  
         $scope.registrationUser = {};
@@ -95,4 +95,4 @@ angular.module('RouteControllers', [])
             }
         }
     });
-});
+})

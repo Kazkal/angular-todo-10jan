@@ -1,24 +1,5 @@
 <div class="container">
     <todo-table></todo-table>
-    <table class="table">
-        <thead>
-            <tr>
-                <td><strong>Title</strong></td>
-                <td><strong>Description</strong></td>
-                <td><strong>Status</strong></td>
-                <td><strong>Actions</strong></td>
-            </tr>
-        </thead>
-        <tr ng-repeat="todo in todos">
-            <td>{{todo.title}}</td>
-            <td>{{todo.description}}</td>
-            <td>{{todo.status}}</td>
-            <td>
-                <button ng-click="editTodo(todo.id)"><span class="glyphicon glyphicon-edit"></span></button>
-                <button ng-click="deleteTodo(todo.id)"><span class="glyphicon glyphicon-trash"></span></button>
-            </td>
-        </tr>
-    </table>
     <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#todo-modal">Create New Todo Item</button>
  
     <div class="modal fade" id="todo-modal" tabindex="-1" role="dialog" aria-labelledby="todo-form-modal" aria-hidden="true">
@@ -31,17 +12,17 @@
                 <div class="modal-body">
                     <form name="todoForm" ng-submit="submitForm()" novalidate>
                         <div class="form-group">
-                            <label>Title</label>
+                            <label>1. Title</label>
                             <input type="text" name="title" class="form-control" ng-model="todo.title" required>
                             <p ng-show="todoForm.title.$pristine" class="help-block">A title is required</p>
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label>2. Description</label>
                             <input type="text" name="description" class="form-control" ng-model="todo.description" required>
                             <p ng-show="todoForm.description.$pristine" class="help-block">A description is required</p>
                         </div>
                         <div class="form-group">
-                            <label>Status</label>
+                            <label>3. Status</label>
                             <select class="form-control" name="status" ng-model="todo.status">
                                 <option value="Todo">Todo</option>
                                 <option value="Doing">Doing</option>
@@ -57,4 +38,4 @@
             </div>
         </div>
     </div>
-</div
+</div>
