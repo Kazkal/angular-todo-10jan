@@ -1,7 +1,7 @@
 angular.module('UserService', [])
 //services r used to make calls to APIs
     .factory('UserAPIService', function($http) {
- 		// create a new object called UserAPIService
+        // create a new object called UserAPIService
         UserAPIService = {
             callAPI: function(url, data) {
                 return $http.post(url, data);
